@@ -3,6 +3,9 @@
 \usepackage{amssymb}
 \usepackage{array}
 \usepackage[a4paper, left=2.3cm, right=2.3cm]{geometry}
+\newcommand{\RN}[1]{%
+  \textup{\uppercase\expandafter{\romannumeral#1}}%
+}
 \begin{document}
 \begin{abstract}
 这篇论文描述了一个人脸识别系统. 它能够在达到极高检测速率的同时非常快速的处理图像. 这个架构有三个关键因素. 
@@ -296,7 +299,7 @@ N=n_0+\sum_{i=1}^{K}\left(n_i\prod_{j<i}p_j\right)
 级联检测器的速度和扫描每个子区域评估的特征数量直接相关. 正如第fig章节所述, 被评估的特征数量依赖于扫描的图像. 因为大量的子区域在级联的前两个阶段就被丢弃, 在$6060$个样例中平均每个子区域需要计算大约$8$个特征 (计算于 MIT + CMU (Rowley et al., 1998). 在一个 $700$Mhz Pentium $\RN{3}$处理器上, 面部检测器能在$0.067$秒内处理一张$384\times288$像素的图像. 它以$1.25$的开始尺寸以及$1.5$的步长扫描). 这个速度比 Rowley-Baluja-Kanade 检测器 (Rowley et al., 1998) 快了大约$15$倍, 比Schneiderman-Kanade 检测器 (Schneiderman and Kanade, 2000) 快了大约$600$倍.
 
 \subsection{Image Processing}
-为了最小化不同光照条件的影响, 训练中所有样例的子区域方差都被规范化. 因此在检测过程中规范化也是必须的. 一张图像的子区域方差能够通过积分图很快地计算出来. 在公式$\sigma^2=m^2-\frac1N\sum x^2$中, $\signa$代表标准差, $m$是均值, $x$则是子区域中的像素值. 子区域的均值能够通过积分图计算出来. 像素平方之和能够通过像素平方后图像的积分图计算出来 (在扫描过程中使用了两张积分图).
+为了最小化不同光照条件的影响, 训练中所有样例的子区域方差都被规范化. 因此在检测过程中规范化也是必须的. 一张图像的子区域方差能够通过积分图很快地计算出来. 在公式$\sigma^2=m^2-\frac1N\sum x^2$中, $\sigma$代表标准差, $m$是均值, $x$则是子区域中的像素值. 子区域的均值能够通过积分图计算出来. 像素平方之和能够通过像素平方后图像的积分图计算出来 (在扫描过程中使用了两张积分图).
 在扫描过程中图像规范化能够在乘上特征值后进行而不是直接在像素上操作.
 
 \subsection{Scanning the Detector}
