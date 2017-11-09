@@ -1,0 +1,34 @@
+@ARTICLE {amity.gemand.1999,
+    author  = "Amit, Y. and Geman, D.",
+    title   = "A computational model for visual selection",
+    journal = "Neural Computation",
+    year    = "1999",
+    volume  = "11",
+    pages   = "1691–1715"
+}
+@ARTICLE {crowf.1984,
+    author  = "Crow, F.",
+    title   = "Summed-area tables for texture mapping",
+    journal = "In Proceed- ings of SIGGRAPH",
+    year    = "1984",
+    volume  = "18",
+    number  = "3",
+    pages   = "207–212"
+}
+@ARTICLE {fleuretf.gemand.2001,
+    author  = "Fleuret, F. and Geman, D.",
+    title   = "Coarse-to-fine face detection",
+    journal = "Int. J. Computer Vision",
+    year    = "2001",
+    volume  = "41",
+    pages   = "85-107"
+}
+@ARTICLE {freemanw.t.adelsone.h.1991,
+    author  = "Freeman, W.T. and Adelson, E.H.",
+    title   = "The design and use of steer- able filters",
+    journal = "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+    year    = "1991",
+    volume  = "13",
+    number  = "9",
+    pages   = "891–906"
+}
